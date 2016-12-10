@@ -19,19 +19,3 @@ var reduce = function(key, values) {
 		totalLateDelay: totalLateDelay
 	}
 }
-
-db.collection.mapReduce(
-	map,
-	reduce,
-	{ out: "map_reduce_example" }
-).find();
-
-db.stocks.mapReduce(
-	mapping1,
-	reducing1,
-	{
-		out : "Results"
-	}
- );
-
- db.Results.find();
